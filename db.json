@@ -1,0 +1,28 @@
+{
+    "concerts": [
+        {
+            "id":1,
+            "title":"Rock",
+            "cost":500,
+            "image":"rock.jpg"
+        },
+        {
+            "id":2,
+            "title":"Pop",
+            "cost":700,
+            "image":"image of pop"
+        },
+        {
+            "id":3,
+            "title":"Hip Hop",
+            "cost":350,
+            "image":"image of hip hop"
+        },
+        {
+            "id":4,
+            "title":"Country",
+            "cost":300,
+            "image":"image of country"
+        }
+    ]
+}
