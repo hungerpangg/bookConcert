@@ -1,28 +1,93 @@
 {
-    "concerts": [
-        {
-            "id":1,
-            "title":"Rock",
-            "cost":500,
-            "image":"rock.jpg"
-        },
-        {
-            "id":2,
-            "title":"Pop",
-            "cost":700,
-            "image":"image of pop"
-        },
-        {
-            "id":3,
-            "title":"Hip Hop",
-            "cost":350,
-            "image":"image of hip hop"
-        },
-        {
-            "id":4,
-            "title":"Country",
-            "cost":300,
-            "image":"image of country"
-        }
-    ]
+  "concerts": [
+    {
+      "id": "1",
+      "title": "Rock",
+      "cost": 500,
+      "image": "rock.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Pop",
+      "cost": 700,
+      "image": "pop.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Hip Hop",
+      "cost": 350,
+      "image": "hiphop.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Country",
+      "cost": 300,
+      "image": "country.jpg"
+    }
+  ],
+  "bookings": [
+    {
+      "concertId": "3",
+      "email": "asd@gmail.com",
+      "quantity": "1",
+      "date": "2025-01-01",
+      "id": 1
+    },
+    {
+      "concertId": "3",
+      "email": "dsa@gmail.com",
+      "quantity": "3",
+      "date": "2025-01-01",
+      "id": 2
+    },
+    {
+      "concertId": "3",
+      "email": "dsa@gmail.com",
+      "quantity": "3",
+      "date": "2025-01-01",
+      "id": 3
+    },
+    {
+      "concertId": "1",
+      "email": "pkwtest@gmail.com",
+      "quantity": "5",
+      "date": "2025-01-01",
+      "id": 4
+    },
+    {
+      "concertId": "1",
+      "email": "asd@gmail.com",
+      "quantity": "1",
+      "date": "2023-01-01",
+      "id": 5
+    },
+    {
+      "concertId": "1",
+      "email": "asd@gmail.com",
+      "quantity": "1",
+      "date": "2023-01-01",
+      "id": 6
+    },
+    {
+      "concertId": "1",
+      "email": "asd@gmail.com",
+      "quantity": "1",
+      "date": "2023-01-01",
+      "id": 7
+    },
+    {
+      "concertId": "1",
+      "email": "asd@gmail.com",
+      "quantity": "2",
+      "date": "2023-01-01",
+      "id": 8
+    },
+    {
+      "concertId": "1",
+      "email": "asd@gmail.com",
+      "quantity": "1",
+      "date": "2025-01-01",
+      "id": 9
+    }
+  ]
 }
