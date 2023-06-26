@@ -1,8 +1,18 @@
 import axios from 'axios';
-import {useReducer} from 'react';
+import {useReducer, useContext, useEffect} from 'react';
 import {useParams, useLocation} from 'react-router-dom';
+import ConcertContext from './allconcerts';
 
 const reducer=(state, action)=>{
+    if(action.type==='first render'){
+        return {
+            ...state,
+            concertDetails: {
+                ...state.concertDetails,
+                ...action.payload
+            }
+        }
+    }
     if(action.type==='onChange'){
             return {
                 ...state,
@@ -33,7 +43,34 @@ const reducer=(state, action)=>{
 
 function Booking(){
 
-    const { currentConcert, currentId, currentConcertImage } = useLocation().state;
+    const { concerts, getConcerts } = useContext(ConcertContext);
+
+    var currentConcert;
+    var currentId;
+    var currentConcertImage;
+
+    useEffect(getConcerts,[]);
+
+    const params=useParams();
+    // console.log(params, 'params')
+    // console.log(concerts, 'concerts')
+    const paramState=useLocation().state;
+    if(paramState){
+    var { currentConcert, currentId, currentConcertImage } = paramState;
+    console.log(paramState, 'asdasdasd');
+    }
+    else if(concerts.length>0){
+    console.log(concerts, 'concertssssss');
+    const concert=concerts.filter(concert=>{
+        return concert.id===params.id
+    })[0];
+    console.log(concert, 'concert');
+    currentConcert=concert.title;
+    currentId=concert.id;
+    currentConcertImage=concert.image;
+    }
+
+    console.log(currentConcert, currentId, currentConcertImage);
 
     const [state, dispatch]=useReducer(reducer,{
         concertDetails: {
@@ -152,7 +189,7 @@ function Booking(){
         }
         }
 
-        console.log(state)
+        console.log(state);
 
     return (
         <div>

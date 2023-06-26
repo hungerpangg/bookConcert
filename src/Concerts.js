@@ -20,6 +20,8 @@ const reducer=(state, action)=>{
 }
 
 function Concerts(){
+
+
     const [state, dispatch]=useReducer(reducer, {
         concerts:[],
         currentConcert:'',
@@ -34,6 +36,7 @@ function Concerts(){
             payload: response.data
         }))
     }
+
 
     useEffect(getConcerts,[]);
 
